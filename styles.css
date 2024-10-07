@@ -21,7 +21,7 @@ h1, h2, h3 {
 header {
     background: #000;
     color: #fff;
-    padding: 1rem 0;
+    padding: 1vw 0;
 }
 
 header .container {
@@ -31,9 +31,7 @@ header .container {
 }
 
 header .logo {
-    height: 50px;
-    width: auto;
-    max-height: 50px;
+    max-width: 30%; /* Scales proportionally */
     object-fit: contain;
 }
 
@@ -45,7 +43,7 @@ header nav ul {
 }
 
 header nav ul li {
-    margin-left: 1rem;
+    margin-left: 2vw; /* Relative margin */
 }
 
 header nav ul li a {
@@ -75,7 +73,9 @@ header nav ul li a:hover {
     overflow: hidden;
 }
 
+
 #video1 {
+    pointer-events: none; /* Disable interactivity for the video */
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -83,14 +83,16 @@ header nav ul li a:hover {
     top: 0;
     left: 0;
     transition: opacity 1s ease-in-out;
+    z-index: -1; /* Keep the video behind other content */
 }
+
 
 .hero-content {
     position: relative;
     z-index: 2;
     color: #fff;
     text-align: center;
-    padding: 2rem;
+    padding: 4vw;
     background: rgba(0, 0, 0, 0.5);
     border-radius: 10px;
     max-width: 80%;
@@ -100,24 +102,24 @@ header nav ul li a:hover {
 }
 
 #hero h2 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+    font-size: 6vw; /* Scales with viewport width */
+    margin-bottom: 2vw;
 }
 
 #hero p {
-    font-size: 1.2rem;
+    font-size: 3vw;
     margin-top: 0;
 }
 
 .btn-primary {
     background-color: #d9534f;
     color: #fff;
-    padding: 0.75rem 1.5rem;
+    padding: 1.5vw 3vw; /* Use vw for padding */
     border-radius: 5px;
     text-decoration: none;
     transition: background 0.3s;
     display: inline-block;
-    margin-top: 1rem;
+    margin-top: 2vw;
 }
 
 .btn-primary:hover {
@@ -127,12 +129,12 @@ header nav ul li a:hover {
 .btn-secondary {
     background-color: #5bc0de;
     color: #fff;
-    padding: 0.75rem 1.5rem;
+    padding: 1.5vw 3vw;
     border-radius: 5px;
     text-decoration: none;
     transition: background 0.3s;
     display: inline-block;
-    margin-top: 1rem;
+    margin-top: 2vw;
 }
 
 .btn-secondary:hover {
@@ -141,7 +143,7 @@ header nav ul li a:hover {
 
 /* Services Section Styles */
 #services {
-    padding: 4rem 0;
+    padding: 8vw 0;
     background: #fff;
     text-align: center;
 }
@@ -153,9 +155,9 @@ header nav ul li a:hover {
 }
 
 .service {
-    flex: 1 1 calc(25% - 2rem);
-    margin: 1rem;
-    padding: 1.5rem;
+    flex: 1 1 calc(25% - 2vw); /* Flex basis using % and vw */
+    margin: 2vw;
+    padding: 3vw;
     background: #f2f2f2;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -167,68 +169,70 @@ header nav ul li a:hover {
 }
 
 .service:hover {
-    transform: translateY(-10px);
+    transform: translateY(-1vw);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .icon-web {
-    width: 80px;
-    height: 80px;
-    background: url('img/website.png') no-repeat center center;
-    background-size: contain;
-    margin: 0 auto 1rem;
+    background-image: url('img/website.png'); /* Add the correct path to your web icon */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 10vw;
+    height: 10vw;
+    margin: 0 auto 1vw;
 }
 
 .icon-mobile {
-    width: 80px;
-    height: 80px;
-    background: url('img/test.png') no-repeat center center;
-    background-size: contain;
-    margin: 0 auto 1rem;
+    background-image: url('img/test.png'); /* Add the correct path to your mobile icon */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 10vw;
+    height: 10vw;
+    margin: 0 auto 1vw;
 }
 
 .icon-data {
-    width: 80px;
-    height: 80px;
-    background: url('img/monitor.png') no-repeat center center;
-    background-size: contain;
-    margin: 0 auto 1rem;
+    background-image: url('img/monitor.png'); /* Add the correct path to your data icon */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 10vw;
+    height: 10vw;
+    margin: 0 auto 1vw;
 }
 
 .icon-custom {
-    width: 80px;
-    height: 80px;
-    background: url('img/custom.png') no-repeat center center;
-    background-size: contain;
-    margin: 0 auto 1rem;
+    background-image: url('img/custom.png'); /* Add the correct path to your custom icon */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 10vw;
+    height: 10vw;
+    margin: 0 auto 1vw;
 }
 
+
 .service h3 {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5vw;
 }
 
 .service p {
-    margin-bottom: 1rem;
-}
-
-/* Highlight selected service */
-.service.selected {
-    border: 2px solid #5bc0de;
-    background-color: #e0f7fa;
+    margin-bottom: 1.5vw;
 }
 
 /* Packages Section Styles */
 #packages {
-    padding: 4rem 0;
+    padding: 8vw 0;
     background: #f9f9f9;
     text-align: center;
-    position: relative;
 }
 
 #packages h2 {
     margin-top: 0;
-    margin-bottom: 2rem;
-    font-size: 2rem;
+    margin-bottom: 4vw;
+    font-size: 4vw;
     position: relative;
     z-index: 2;
 }
@@ -236,20 +240,20 @@ header nav ul li a:hover {
 .packages-table {
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 2vw;
     flex-wrap: wrap;
     align-items: flex-start;
 }
 
 .package-card {
     background: #fff;
-    padding: 2rem;
+    padding: 3vw;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
     text-align: center;
-    flex: 1 1 calc(30% - 2rem);
-    max-width: 300px;
+    flex: 1 1 calc(30% - 2vw); /* Flex basis with percentage */
+    max-width: 25vw;
     position: relative;
     transform: translateY(0);
 }
@@ -262,30 +266,30 @@ header nav ul li a:hover {
 
 .package-card.middle .best-value-banner {
     position: absolute;
-    top: -15px;
+    top: -1.5vw;
     left: 50%;
     transform: translateX(-50%);
     background: #ffeb3b;
     color: #333;
-    padding: 5px 10px;
+    padding: 1vw 2vw;
     border-radius: 20px;
-    font-size: 0.8rem;
+    font-size: 1vw;
     font-weight: bold;
 }
 
 .package-card h3 {
-    margin-bottom: 1rem;
+    margin-bottom: 2vw;
 }
 
 .package-card p {
-    margin-bottom: 1rem;
+    margin-bottom: 2vw;
 }
 
 .package-card a.btn-primary {
     display: inline-block;
     background: #d9534f;
     color: #fff;
-    padding: 0.75rem 1.5rem;
+    padding: 1.5vw 3vw;
     border-radius: 5px;
     text-decoration: none;
     transition: background 0.3s;
@@ -295,52 +299,42 @@ header nav ul li a:hover {
     background: #c9302c;
 }
 
-/* Highlight selected package */
-.package-card.selected {
-    border: 2px solid #d9534f;
-    background-color: #f9ecec;
-}
-
-/* Hover Effect */
 .package-card:hover {
-    transform: translateY(-10px) scale(1.05);
+    transform: translateY(-1vw) scale(1.05);
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
 
 /* Clients Section Styles */
 #clients {
-    padding: 4rem 0;
+    padding: 8vw 0;
     background: #fff;
 }
 
 #clients h2 {
     text-align: center;
-    font-size: 2rem;
-    margin-bottom: 2rem;
+    font-size: 4vw;
+    margin-bottom: 4vw;
 }
 
 .clients-logos {
     overflow: hidden;
     position: relative;
-    
-    padding-top: 20px; /* Add some padding to ensure the logo is not cut off */
-
+    padding-top: 2vw;
 }
 
 .logo-slide {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 10vh; /* Full viewport height to center vertically */
-    width: 100%;   /* Full width of the screen */
+    height: 15vh; /* Relative to viewport height */
+    width: 100%;
     background-color: #fff;
-    /* animation: scroll 20s linear infinite; */
-} 
+}
 
 .logo-slide img {
-    max-width: 150px;
-    max-height: 75px;
-    margin: 0 40px;
+    max-width: 15vw; /* Proportional to screen width */
+    max-height: auto;
+    margin: 0 4vw;
     object-fit: contain;
 }
 
@@ -353,97 +347,31 @@ header nav ul li a:hover {
     }
 }
 
-/* About Section Styles */
-#about {
-    padding: 4rem 0;
-    background: #f9f9f9;
-    text-align: center;
-}
-
-#about p {
-    max-width: 700px;
-    margin: 0 auto;
-    margin-bottom: 2rem;
-    line-height: 1.6;
-}
-
-/* Schedule a Meeting Section */
-#schedule-meeting {
-    padding: 4rem 0;
-    background: #fff;
-    text-align: center;
-}
-
-#schedule-meeting h2 {
-    margin-bottom: 2rem;
-    font-size: 2rem;
-}
-
-#meeting-form {
-    max-width: 400px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-}
-
-#meeting-form label {
-    margin-top: 1rem;
-    text-align: left;
-}
-
-#meeting-form input[type="text"],
-#meeting-form input[type="email"],
-#meeting-form input[type="tel"],
-#meeting-form input[type="date"],
-#meeting-form input[type="time"] {
-    padding: 0.5rem;
-    margin-top: 0.5rem;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-size: 1rem;
-}
-
-#meeting-form input[type="submit"] {
-    margin-top: 2rem;
-    padding: 0.75rem;
-    background-color: #d9534f;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-#meeting-form input[type="submit"]:hover {
-    background-color: #c9302c;
-}
-
 /* Footer Styles */
 footer {
     background: #000;
     color: #fff;
-    padding: 2rem 0;
-    text-align: center; /* Ensure the footer content is centered */
+    padding: 4vw 0;
+    text-align: center;
 }
 
 .footer-info {
     display: flex;
-    justify-content: center; /* Center the content horizontally */
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    max-width: 700px;
+    max-width: 80vw;
     margin: 0 auto;
 }
 
 footer p {
     text-align: center;
-    width: 100%; /* Ensure full width for centering */
-    margin: 0; /* Reset margins */
+    width: 100%;
+    margin: 0;
 }
 
-
 .social-media a {
-    margin: 0 1rem;
+    margin: 0 2vw;
     transition: opacity 0.3s;
 }
 
@@ -451,26 +379,27 @@ footer p {
     opacity: 0.7;
 }
 
-/* Added CSS to adjust the social media logos */
 .social-media img {
-    width: 40px; /* Set the desired width */
-    height: 40px; /* Set the desired height */
-    object-fit: contain; /* Maintain aspect ratio */
+    width: 4vw;
+    height: 4vw;
+    object-fit: contain;
 }
 
 .contact-info p {
-    margin: 0.5rem 0;
+    margin: 1vw 0;
     text-align: center;
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-    .service, .package-card, .logo-placeholder {
-        flex: 1 1 calc(50% - 2rem);
+    .service, .package-card {
+        flex: 1 1 calc(50% - 2vw); /* Adjust for smaller screens */
     }
+
     .packages-table {
         flex-direction: column;
     }
+
     .footer-info {
         flex-direction: column;
         text-align: center;
@@ -478,125 +407,7 @@ footer p {
 }
 
 @media (max-width: 480px) {
-    .service, .package-card, .logo-placeholder {
+    .service, .package-card {
         flex: 1 1 100%;
     }
-}
-
-/* About us */
-
-/* About Intro Section */
-#about-intro {
-    padding: 4rem 0;
-    background: #f2f2f2;
-    text-align: center;
-}
-
-#about-intro p {
-    max-width: 800px;
-    margin: 0 auto;
-    line-height: 1.6;
-    font-size: 1.2rem;
-}
-
-/* Vision & Mission Section */
-#vision {
-    padding: 4rem 0;
-    background: #fff;
-    text-align: center;
-}
-
-.vision-mission {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 2rem;
-}
-
-.vision, .mission {
-    flex: 1 1 calc(50% - 2rem);
-    padding: 1.5rem;
-    background: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.vision h3, .mission h3 {
-    margin-bottom: 1rem;
-}
-
-.vision p, .mission p {
-    line-height: 1.6;
-}
-
-/* Tools Section */
-#tools {
-    padding: 4rem 0;
-    background: #f9f9f9;
-    text-align: center;
-}
-
-.tools-grid {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 2rem;
-}
-
-.tool {
-    flex: 1 1 calc(25% - 2rem);
-    padding: 1.5rem;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.tool img {
-    max-width: 80px;
-    margin-bottom: 1rem;
-}
-
-.tool h3 {
-    margin-bottom: 1rem;
-}
-
-.tool p {
-    line-height: 1.6;
-}
-
-/* Languages Section */
-#languages {
-    padding: 4rem 0;
-    background: #f9f9f9;
-    text-align: center;
-}
-
-.languages-grid {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 2rem;
-}
-
-.language {
-    flex: 1 1 calc(30% - 2rem);
-    padding: 1.5rem;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.language img {
-    max-width: 80px;
-    margin-bottom: 1rem;
-}
-
-.language h3 {
-    margin-bottom: 1rem;
-}
-
-.language p {
-    line-height: 1.6;
 }
