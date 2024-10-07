@@ -31,7 +31,7 @@ header .container {
 }
 
 header .logo {
-    max-width: 30%; /* Scales proportionally */
+    max-width: 10%; /* Scales proportionally */
     object-fit: contain;
 }
 
@@ -170,10 +170,11 @@ header nav ul li a:hover {
 }
 
 .icon-web, .icon-mobile, .icon-data, .icon-custom {
-    width: 10vw; /* Icons scale based on viewport width */
-    height: auto;
+    width: 80px; /* Fixed width to ensure visibility */
+    height: 80px; /* Fixed height */
     background-size: contain;
-    margin: 0 auto 1vw;
+    background-position: center;
+    margin: 0 auto 1rem;
 }
 
 .service h3 {
