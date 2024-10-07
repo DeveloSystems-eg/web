@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Develo Systems | Software Development Company</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="img/DEVELO (4).png" alt="Develo Systems Logo" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="#services">Services</a></li>
+                    <!-- <li><a href="#packages">Packages</a></li> -->
+                    <li><a href="#clients">Clients</a></li>
+                    <!-- <li><a href="AboutUs.html">About Us</a></li> -->
+                    <li><a href="#contact-info">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section id="hero">
+        <div class="video-wrapper">
+            <video id="video1" autoplay muted loop>
+                <source src="videos/3129957-uhd_3840_2160_25fps.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="hero-content">
+            <h2>Innovative Solutions for Your Business</h2>
+            <p>Empowering your business with cutting-edge software development.</p>
+            <a href="#services" class="btn-primary">Get Started</a>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <h2>Services We Provide</h2>
+            <div class="service-grid">
+                <div class="service" id="service-web">
+                    <div class="icon-web"></div>
+                    <h3>Web Development</h3>
+                    <p>High-quality web development services tailored to your business needs.</p>
+                </div>
+                <div class="service" id="service-mobile">
+                    <div class="icon-mobile"></div>
+                    <h3>Mobile App Development</h3>
+                    <p>Creating seamless and responsive mobile applications for all platforms.</p>
+                </div>
+                <div class="service" id="service-data">
+                    <div class="icon-data"></div>
+                    <h3>Data Analysis</h3>
+                    <p>Providing insights through data analysis to drive your business forward.</p>
+                </div>
+                <div class="service" id="service-custom">
+                    <div class="icon-custom"></div>
+                    <h3>Custom Software</h3>
+                    <p>Developing custom software to solve unique business challenges.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="clients">
+        <div class="container">
+            <h2>Our Clients</h2>
+            <div class="clients-logos">
+                <div class="logo-slide">
+                    <!-- Wrap the image with an anchor tag linking to the client's website -->
+                    <a href="https://www.elsewedyelectric.com/en/default" target="_blank">
+                        <img src="img/638054089674469320.png" alt="Elsewedy Electric Logo">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <footer id="contact-info">
+        <div class="container">
+            <div class="footer-info">
+                <div class="social-media">
+                    <a href="https://www.linkedin.com/company/103178224/admin/dashboard/">
+                        <img src="img/2018_social_media_popular_app_logo_linkedin-512.webp" alt="LinkedIn">
+                    </a>
+                    <a href="https://www.instagram.com/develosystems">
+                        <img src="img/Instagram_logo.png" alt="Instagram">
+                    </a>
+                </div>
+                <div class="contact-info">
+                    <p>Email: Abdalla.Soliman@develosystems.com</p>
+                    <p>Phone: +201 22 8521747</p>
+                </div>
+            </div>
+            <p>&copy; 2024 Develo Systems (AlRikaz for communication and information technology). All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for Get Started and other links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Highlight selected service and package
+        const serviceLinks = document.querySelectorAll('.service a');
+        const packageLinks = document.querySelectorAll('.package-card a');
+
+        serviceLinks.forEach(link => {
+            link.addEventListener('click', function () {
+                document.querySelectorAll('.service').forEach(service => {
+                    service.classList.remove('selected');
+                });
+                this.parentElement.classList.add('selected');
+            });
+        });
+
+        packageLinks.forEach(link => {
+            link.addEventListener('click', function () {
+                document.querySelectorAll('.package-card').forEach(package => {
+                    package.classList.remove('selected');
+                });
+                this.parentElement.classList.add('selected');
+            });
+        });
+    </script>
+</body>
+</html>
