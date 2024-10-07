@@ -31,7 +31,7 @@ header .container {
 }
 
 header .logo {
-    max-width: 10%; /* Scales proportionally */
+    max-width: 30%; /* Scales proportionally */
     object-fit: contain;
 }
 
