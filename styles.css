@@ -1,413 +1,206 @@
-/* General Styles */
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #333;
-    background: #f9f9f9;
-    scroll-behavior: smooth;
+    background: #1a1a1a;
+    color: #fff;
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    animation: fadeIn 2s ease-in-out; /* Fade-in for body */
 }
 
-h1, h2, h3 {
-    margin: 0;
-}
-
+/* Adjust container width for mobile */
 .container {
-    width: 80%;
-    margin: 0 auto;
+    width: 90vw; /* Use viewport width */
+    margin: auto;
+    position: relative;
 }
 
-/* Header Styles */
 header {
-    background: #000;
+    background: linear-gradient(90deg, #333, #4f4f4f);
     color: #fff;
-    padding: 1vw 0;
-}
-
-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-header .logo {
-    max-width: 30%; /* Scales proportionally */
-    object-fit: contain;
-}
-
-header nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-header nav ul li {
-    margin-left: 2vw; /* Relative margin */
-}
-
-header nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-header nav ul li a:hover {
-    color: #aaa;
-}
-
-/* Hero Section Styles */
-#hero {
+    padding: 5vw; /* Use viewport width to make padding responsive */
+    border-bottom: #c59c6e 3px solid;
     position: relative;
-    height: 100vh;
-    overflow: hidden;
+    animation: slideDown 1s ease-out; /* Slide down header */
 }
 
-.video-wrapper {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    overflow: hidden;
-}
-
-
-#video1 {
-    pointer-events: none; /* Disable interactivity for the video */
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: opacity 1s ease-in-out;
-    z-index: -1; /* Keep the video behind other content */
-}
-
-
-.hero-content {
-    position: relative;
-    z-index: 2;
-    color: #fff;
+header h1 {
+    font-family: 'Georgia', serif;
+    font-size: 6vw; /* Use responsive font size */
     text-align: center;
-    padding: 4vw;
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-    max-width: 80%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    top: 50%;
-}
-
-#hero h2 {
-    font-size: 6vw; /* Scales with viewport width */
-    margin-bottom: 2vw;
-}
-
-#hero p {
-    font-size: 3vw;
-    margin-top: 0;
-}
-
-.btn-primary {
-    background-color: #d9534f;
-    color: #fff;
-    padding: 1.5vw 3vw; /* Use vw for padding */
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background 0.3s;
-    display: inline-block;
-    margin-top: 2vw;
-}
-
-.btn-primary:hover {
-    background-color: #c9302c;
-}
-
-.btn-secondary {
-    background-color: #5bc0de;
-    color: #fff;
-    padding: 1.5vw 3vw;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background 0.3s;
-    display: inline-block;
-    margin-top: 2vw;
-}
-
-.btn-secondary:hover {
-    background-color: #31b0d5;
-}
-
-/* Services Section Styles */
-#services {
-    padding: 8vw 0;
-    background: #fff;
-    text-align: center;
-}
-
-.service-grid {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.service {
-    flex: 1 1 calc(25% - 2vw); /* Flex basis using % and vw */
-    margin: 2vw;
-    padding: 3vw;
-    background: #f2f2f2;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    text-align: center;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-}
-
-.service:hover {
-    transform: translateY(-1vw);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.icon-web {
-    background-image: url('img/website.png'); /* Add the correct path to your web icon */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 10vw;
-    height: 10vw;
-    margin: 0 auto 1vw;
-}
-
-.icon-mobile {
-    background-image: url('img/test.png'); /* Add the correct path to your mobile icon */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 10vw;
-    height: 10vw;
-    margin: 0 auto 1vw;
-}
-
-.icon-data {
-    background-image: url('img/monitor.png'); /* Add the correct path to your data icon */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 10vw;
-    height: 10vw;
-    margin: 0 auto 1vw;
-}
-
-.icon-custom {
-    background-image: url('img/custom.png'); /* Add the correct path to your custom icon */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 10vw;
-    height: 10vw;
-    margin: 0 auto 1vw;
-}
-
-
-.service h3 {
-    margin-bottom: 1.5vw;
-}
-
-.service p {
-    margin-bottom: 1.5vw;
-}
-
-/* Packages Section Styles */
-#packages {
-    padding: 8vw 0;
-    background: #f9f9f9;
-    text-align: center;
-}
-
-#packages h2 {
-    margin-top: 0;
-    margin-bottom: 4vw;
-    font-size: 4vw;
-    position: relative;
-    z-index: 2;
-}
-
-.packages-table {
-    display: flex;
-    justify-content: center;
-    gap: 2vw;
-    flex-wrap: wrap;
-    align-items: flex-start;
-}
-
-.package-card {
-    background: #fff;
-    padding: 3vw;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
-    text-align: center;
-    flex: 1 1 calc(30% - 2vw); /* Flex basis with percentage */
-    max-width: 25vw;
-    position: relative;
-    transform: translateY(0);
-}
-
-.package-card.middle {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-}
-
-.package-card.middle .best-value-banner {
-    position: absolute;
-    top: -1.5vw;
-    left: 50%;
-    transform: translateX(-50%);
-    background: #ffeb3b;
-    color: #333;
-    padding: 1vw 2vw;
-    border-radius: 20px;
-    font-size: 1vw;
     font-weight: bold;
+    animation: popIn 1.5s ease-in-out; /* Pop-in animation for title */
 }
 
-.package-card h3 {
-    margin-bottom: 2vw;
+/* Logo Styles */
+.logo-placeholder {
+    position: absolute;
+    top: -2vw;
+    left: -12vw;
+    z-index: 2;
+    animation: fadeIn 1.2s ease-out; /* Fade-in for logo */
 }
 
-.package-card p {
-    margin-bottom: 2vw;
+body[dir="rtl"] .logo-placeholder {
+    left: auto;  /* Remove left positioning */
+    right: 5vw; /* Adjust right positioning for RTL */
 }
 
-.package-card a.btn-primary {
-    display: inline-block;
-    background: #d9534f;
-    color: #fff;
-    padding: 1.5vw 3vw;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background 0.3s;
+.logo-placeholder img {
+    width: 20vw;
+    height: 20vw;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
-.package-card a.btn-primary:hover {
-    background: #c9302c;
-}
-
-.package-card:hover {
-    transform: translateY(-1vw) scale(1.05);
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-}
-
-/* Clients Section Styles */
-#clients {
-    padding: 8vw 0;
-    background: #fff;
-}
-
-#clients h2 {
-    text-align: center;
-    font-size: 4vw;
-    margin-bottom: 4vw;
-}
-
-.clients-logos {
-    overflow: hidden;
-    position: relative;
-    padding-top: 2vw;
-}
-
-.logo-slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 15vh; /* Relative to viewport height */
-    width: 100%;
-    background-color: #fff;
-}
-
-.logo-slide img {
-    max-width: 15vw; /* Proportional to screen width */
-    max-height: auto;
-    margin: 0 4vw;
-    object-fit: contain;
-}
-
-@keyframes scroll {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
-}
-
-/* Footer Styles */
-footer {
+/* Responsive nav styles */
+nav {
     background: #000;
-    color: #fff;
-    padding: 4vw 0;
     text-align: center;
+    padding: 3vh 0;
+    animation: slideUp 1.5s ease-out; /* Slide up effect for navbar */
 }
 
-.footer-info {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    max-width: 80vw;
-    margin: 0 auto;
-}
-
-footer p {
-    text-align: center;
-    width: 100%;
+nav ul {
+    list-style: none;
+    padding: 0;
     margin: 0;
 }
 
-.social-media a {
-    margin: 0 2vw;
-    transition: opacity 0.3s;
+nav ul li {
+    display: inline-block;
+    margin-right: 5vw;
 }
 
-.social-media a:hover {
-    opacity: 0.7;
+body[dir="rtl"] nav ul li {
+    margin-right: 0;
+    margin-left: 5vw; /* Switch margins for RTL */
 }
 
-.social-media img {
-    width: 4vw;
-    height: 4vw;
-    object-fit: contain;
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 4vw; /* Responsive font size */
+    transition: color 0.3s ease;
 }
 
-.contact-info p {
-    margin: 1vw 0;
+nav ul li a:hover {
+    color: #c59c6e;
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+/* Adjust padding and text alignment for sections */
+section {
+    padding: 10vh 0;
+}
+
+h2 {
+    font-size: 6vw; /* Responsive font size */
     text-align: center;
+    margin-bottom: 4vh;
+    color: #c59c6e;
 }
 
-/* Responsive Styles */
+/* About Section */
+#about-text {
+    font-size: 4vw;
+    max-width: 90vw;
+    margin: 0 auto;
+    text-align: center;
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* Lawyer Card Section */
+.lawyer-card {
+    display: flex;
+    background-color: #2a2a2a;
+    border: 1px solid #444;
+    border-radius: 10px;
+    margin-bottom: 5vh;
+    padding: 5vh;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    animation: fadeInUp 2s ease-out;
+}
+
+.lawyer-photo {
+    width: 20vw;
+    height: 20vw;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 5vw;
+}
+
+body[dir="rtl"] .lawyer-photo {
+    margin-left: 5vw;
+    margin-right: 0;
+}
+
+.lawyer-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+body[dir="rtl"] .lawyer-details {
+    text-align: right;
+}
+
+/* Responsive button styles */
+.contact-btn {
+    background-color: #c59c6e;
+    color: #fff;
+    padding: 2vh 4vw;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    align-self: flex-end;
+    margin-left: 5vw;
+}
+
+.contact-btn:hover {
+    background-color: #a4764a;
+}
+
+/* Media query for mobile screens */
 @media (max-width: 768px) {
-    .service, .package-card {
-        flex: 1 1 calc(50% - 2vw); /* Adjust for smaller screens */
+    header h1 {
+        font-size: 8vw;
     }
 
-    .packages-table {
-        flex-direction: column;
+    nav ul li {
+        margin-right: 3vw;
     }
 
-    .footer-info {
-        flex-direction: column;
+    nav ul li a {
+        font-size: 5vw;
+    }
+
+    .lawyer-photo {
+        width: 25vw;
+        height: 25vw;
+    }
+
+    .contact-btn {
+        margin-left: 0;
+        width: 100%;
         text-align: center;
     }
-}
 
-@media (max-width: 480px) {
-    .service, .package-card {
-        flex: 1 1 100%;
+    #about-text {
+        font-size: 5vw;
     }
 }
