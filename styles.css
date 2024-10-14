@@ -319,8 +319,21 @@ header nav ul li a:hover {
 .clients-logos {
     overflow: hidden;
     position: relative;
-    padding-top: 2vw;
+    padding-top: 1vw;
 }
+.roundlogo-placeholder {
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 1vw;
+    padding-top: 0.5vw;
+}
+.roundlogo-placeholder img {
+    width: 35%;
+    border-radius: 50%;
+  
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
 
 .logo-slide {
     display: flex;
@@ -389,6 +402,7 @@ footer p {
     margin: 1vw 0;
     text-align: center;
 }
+
 
 /* Responsive Styles */
 @media (max-width: 768px) {
