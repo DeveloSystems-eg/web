@@ -418,10 +418,16 @@ footer p {
         flex-direction: column;
         text-align: center;
     }
+    .roundlogo-placeholder img {
+        width: 50%; /* Increase size for mobile */
+    }
 }
 
 @media (max-width: 480px) {
     .service, .package-card {
         flex: 1 1 100%;
+    }
+    .roundlogo-placeholder img {
+        width: 50%; /* Increase size for mobile */
     }
 }
