@@ -340,8 +340,8 @@ header nav ul li a:hover {
     justify-content: center;
     align-items: center;
     height: 15vh; /* Relative to viewport height */
-    width: 100%;
     background-color: #fff;
+    padding-left: 10%;
 }
 
 .logo-slide img {
